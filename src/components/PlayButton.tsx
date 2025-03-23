@@ -1,13 +1,22 @@
 "use client";
 import Button from '@mui/material/Button';
+import { SxProps, Theme } from '@mui/system';
 
 
-export default function PlayButton(){
+interface PlayButtonProps{
+    className: string
+    sx?: SxProps<Theme>
+}
+
+
+const PlayButton: React.FC<PlayButtonProps> = (props: PlayButtonProps) => {
     return (
         <>
-             <div className="h-screen flex items-right justify-right">
-                <Button variant="outlined">PLAY</Button>
-            </div>
+        <div id="playButton" className={props.className}>
+            <Button variant="outlined" sx={{...props.sx}}>PLAY</Button>
+        </div>
         </>
     )
 }
+
+export default PlayButton
