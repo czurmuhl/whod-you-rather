@@ -13,7 +13,14 @@ export default function Landing(){
     const subtitle: string = "Bachelorette Edition!"
     return (
         <>
-          <div className="relative">
+          <iframe style={{borderRadius: "12px", zIndex: 1, pointerEvents: 'auto'}}
+            src="https://open.spotify.com/embed/track/5G2f63n7IPVPPjfNIGih7Q?utm_source=generator&theme=0&autoplay=true" 
+            width="20%" 
+            height="100" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+           />
+
+          <div className="relative">          
             <div className="h-screen flex items-center justify-center">
                 <Heart widthPercent="24%" 
                     heightPercent="42%" 

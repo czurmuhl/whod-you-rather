@@ -39,8 +39,8 @@ const Heart: React.FC<HeartProperties> = (props: HeartProperties) => {
                 ></div> 
             </div>
 
-            <div id="bachelorette" className="absolute inset-0 flex justify-center items-center mb-[30%]">
-                <Image src="/images/melrose.png" alt="melrose" width={420} height={150}></Image>
+            <div id="bachelorette" className="absolute inset-0 flex justify-center items-center mt-[5%] mb-[30%] ml-[35%]" style={{"height": "30%", width: "30%"}}>
+                <Image src="/images/melrose.png" alt="melrose" width={420} height={150} layout="responsive"></Image>
             </div>
 
             <div className="absolute inset-0 flex justify-center items-center">
