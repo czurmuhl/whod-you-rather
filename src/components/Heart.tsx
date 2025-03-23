@@ -40,15 +40,16 @@ const Heart: React.FC<HeartProperties> = (props: HeartProperties) => {
             </div>
 
             <div id="bachelorette" className="absolute inset-0 flex justify-center items-center mb-[30%]">
-                <Image src="/images/melrose.png" alt="melrose" width={350} height={100}></Image>
+                <Image src="/images/melrose.png" alt="melrose" width={420} height={150}></Image>
             </div>
 
             <div className="absolute inset-0 flex justify-center items-center">
                 <p id="titleHeader" 
-                    className="text-black font-bold text-4xl mb-[8%]" 
+                    className="text-black text-8xl" 
                     style={{
-                        fontStretch: "extra-condensed",
-                        fontSize: "300%",
+                        fontStretch: "ultra-expanded",
+                        letterSpacing: '5px',
+                        fontFamily: "Noto Serif Display",
                         }}>
                     
                     {props.title}
@@ -60,7 +61,7 @@ const Heart: React.FC<HeartProperties> = (props: HeartProperties) => {
                    className="text-black font-bold mt-[25%]" 
                    style={{
                         fontSize: "400%",
-                        color: "blue",
+                        color: "purple",
                         fontFamily: "cursive",
                         }}>
                         

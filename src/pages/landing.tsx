@@ -9,13 +9,13 @@ export default function Landing(){
     const darkerPink: string = '#FF1493'
     const lightHotPink: string = '#FF69B4'
     const title: string = "Who'd You Rather?..."
-    const subtitle: string = "Bachelorette!"
+    const subtitle: string = "Bachelorette Edition!"
     return (
         <>
           <div className="relative">
             <div className="h-screen flex items-center justify-center">
-                <Heart widthPercent="22%" 
-                    heightPercent="41%" 
+                <Heart widthPercent="24%" 
+                    heightPercent="42%" 
                     backgroundColor={heartColor} 
                     title={title} 
                     subtitle={subtitle}/>
