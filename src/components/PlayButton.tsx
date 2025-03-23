@@ -1,4 +1,3 @@
-"use client";
 import Button from '@mui/material/Button';
 import { SxProps, Theme } from '@mui/system';
 

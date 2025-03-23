@@ -1,6 +1,7 @@
 
 import Heart from "@/components/Heart"
 import PlayButton from "@/components/PlayButton"
+import Link from "next/link"
 
 export default function Landing(){
 
@@ -20,20 +21,22 @@ export default function Landing(){
                     title={title} 
                     subtitle={subtitle}/>
             </div>
-            <PlayButton className="absolute top-[80%] left-3/4" 
-                        sx={{
-                        backgroundColor: hotPink, 
-                        color: '#FFFFFF', // White text color
-                        border: '2px solid #FF1493', // Border color
-                        width: "150px",
-                        height: "50px",
-                        fontSize: "20px",
-                        fontFamily: "Comic Sans MS",
-                        '&:hover': {
-                            backgroundColor: darkerPink,
-                            borderColor: lightHotPink, // Change border color on hover (light hot pink)
-                        },
-                }}/>
+            <Link href="/selection">
+                <PlayButton className="absolute top-[80%] left-3/4" 
+                            sx={{
+                            backgroundColor: hotPink, 
+                            color: '#FFFFFF', // White text color
+                            border: '2px solid #FF1493', // Border color
+                            width: "150px",
+                            height: "50px",
+                            fontSize: "20px",
+                            fontFamily: "Comic Sans MS",
+                            '&:hover': {
+                                backgroundColor: darkerPink,
+                                borderColor: lightHotPink, // Change border color on hover (light hot pink)
+                            },
+                    }}/>
+            </Link>
           </div>
         </>
     )
