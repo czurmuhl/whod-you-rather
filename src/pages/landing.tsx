@@ -17,7 +17,8 @@ export default function Landing(){
             src="https://open.spotify.com/embed/track/5G2f63n7IPVPPjfNIGih7Q?utm_source=generator&theme=0&autoplay=true" 
             width="20%" 
             height="100" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
            />
 
           <div className="relative">          
