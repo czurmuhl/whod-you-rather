@@ -35,7 +35,7 @@ export default function Selection(){
         const randomLeft: string = men[randomLeftIndex];
         
         // Remove the random left image from the array
-        let filtered: string[] = men.filter(man => man !== randomLeft);
+        const filtered: string[] = men.filter(man => man !== randomLeft);
     
         const randomRightIndex: number = getRandomInt(0, filtered.length - 1);
         const randomRight: string = filtered[randomRightIndex];
@@ -49,7 +49,7 @@ export default function Selection(){
 
     const handleImageClick = (side: string) => {
         if(finalRound){
-            let winningImg: string = side === 'left' ? leftImage : rightImage;
+            const winningImg: string = side === 'left' ? leftImage : rightImage;
             sessionStorage.setItem("winningImg", winningImg)
 
             router.push({
