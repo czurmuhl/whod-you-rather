@@ -35,7 +35,7 @@ export default function Winner() {
                 {Array.from({ length: numRings }).map((_, i) => (
                     <img
                         key={i}
-                        src="./images/engagement_ring.jpg"
+                        src="/images/engagement_ring.jpg"
                         alt="Engagement Ring"
                         className="absolute opacity-90 animate-fall"
                         style={{
@@ -73,7 +73,7 @@ export default function Winner() {
                         {image ? (
                             <Image className="rounded-lg shadow-lg object-cover" src={image} alt="Winner" width={500} height={600} />
                         ) : (
-                            <Image className="rounded-lg shadow-lg object-cover" src="./images/men/24.jpg" alt="Winner" width={500} height={600} />
+                            <Image className="rounded-lg shadow-lg object-cover" src="/images/men/24.jpg" alt="Winner" width={500} height={600} />
                         )}
                     </div>
 
