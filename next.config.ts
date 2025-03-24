@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
 
   basePath: '/whod-you-rather', // replace with your GitHub repository name
   trailingSlash: true,     // Ensure trailing slashes for GitHub Pages to work correctly
+  output: 'export',
 
 };
 
