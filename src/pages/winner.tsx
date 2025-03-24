@@ -33,7 +33,7 @@ export default function Winner() {
             <div className="relative min-h-screen flex justify-center items-center overflow-hidden m-0">
                 {/* Render falling engagement rings */}
                 {Array.from({ length: numRings }).map((_, i) => (
-                    <Image
+                    <img
                         key={i}
                         src="/images/engagement_ring.jpg"
                         alt="Engagement Ring"
