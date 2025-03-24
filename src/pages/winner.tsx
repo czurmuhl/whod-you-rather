@@ -69,16 +69,16 @@ export default function Winner() {
 
 
                     {/* Winner Image */}
-                    <div id="winnerImage" className="flex justify-center items-center mt-8">
+                    <div id="winnerImage" className="flex justify-center items-center w-full h-[600px] overflow-hidden relative mt-4">
                         {image ? (
-                            <Image className="rounded-lg shadow-lg" src={image} alt="Winner" width={400} height={400} />
+                            <Image className="rounded-lg shadow-lg object-cover" src={image} alt="Winner" width={500} height={600} />
                         ) : (
-                            <Image className="rounded-lg shadow-lg" src="/images/men/24.jpg" alt="Winner" width={400} height={400} />
+                            <Image className="rounded-lg shadow-lg object-cover" src="/images/men/24.jpg" alt="Winner" width={500} height={600} />
                         )}
                     </div>
 
                     {/* Play Again Button */}
-                    <div id="playAgain" className="mt-12">
+                    <div id="playAgain" className="mt-10">
                         <Link href="/selection">
                             <PlayButton
                                 className="text-center"
