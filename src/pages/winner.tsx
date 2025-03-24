@@ -3,6 +3,8 @@ import Image from 'next/image'
 import PlayButton from '@/components/PlayButton';
 import Link from 'next/link'
 import { useState, useEffect } from 'react';
+import Head from 'next/head'
+
 
 export default function Winner() {
     const hotPink: string = '#FF69B4'
@@ -21,30 +23,50 @@ export default function Winner() {
 
     return (
         <>
+             <Head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet" />
+            </Head>
+
             {/* Raining Rings in Background */}
-            <div className="relative min-h-screen flex justify-center items-center overflow-hidden">
+            <div className="relative min-h-screen flex justify-center items-center overflow-hidden m-0">
                 {/* Render falling engagement rings */}
                 {Array.from({ length: numRings }).map((_, i) => (
                     <img
                         key={i}
                         src="/images/engagement_ring.jpg"
                         alt="Engagement Ring"
-                        className="absolute opacity-70 animate-fall"
+                        className="absolute opacity-90 animate-fall"
                         style={{
                             top: `${Math.random() * -100}vh`, // Start off-screen
                             left: `${Math.random() * 100}vw`,
                             width: `${Math.random() * 150 + 50}px`, // Random size
                             animationDuration: `${Math.random() * 5 + 5}s`, // Random fall speed
-                            animationDelay: `${Math.random() * 2}s`,
                         }}
                     />
                 ))}
 
                 {/* Winner Content */}
-                <div className="z-10 text-center">
-                    <h1 className="text-6xl font-bold text-black drop-shadow-lg">
-                        Winner!
-                    </h1>
+                <div className="z-10 text-center w-full">
+                    <div className="w-screen flex flex-row mt-0 m-0">
+                        <div className="flex-shrink-0">
+                            <iframe
+                                style={{ borderRadius: "12px", pointerEvents: 'auto' }}
+                                src="https://open.spotify.com/embed/track/77mnUPdjFBDZuBnSLgOEgb?utm_source=generator&theme=0&autoplay=true"
+                                width="350px"
+                                height="100px"
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div className="pl-[14%] py-8">
+                            <p className="text-7xl text-black drop-shadow-lg" style={{ fontFamily: "Notable, sans-serif" }}>
+                                WINNER!
+                            </p>
+                        </div>
+                    </div>
+
 
                     {/* Winner Image */}
                     <div id="winnerImage" className="flex justify-center items-center mt-8">
@@ -83,7 +105,7 @@ export default function Winner() {
                 <style jsx>{`
                     @keyframes fall {
                         0% {
-                            transform: translateY(-100vh) rotate(0deg);
+                            transform: translateY(-100) rotate(0deg);
                             opacity: 0;
                         }
                         100% {
