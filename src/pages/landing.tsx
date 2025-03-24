@@ -31,6 +31,7 @@ export default function Landing(){
             </div>
             <Link href="/selection">
                 <PlayButton className="absolute top-[80%] left-3/4" 
+                            text="PLAY"
                             sx={{
                             backgroundColor: hotPink, 
                             color: '#FFFFFF', // White text color

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {useState, useEffect} from "react";
+import { useRouter } from 'next/router';
 
 
 function getRandomInt(min: number, max: number): number {
@@ -16,10 +17,13 @@ export default function Selection(){
     const [rightImage, setRightImage] = useState<string>("")
     const [finalRound, setFinalRound] = useState<boolean>(false)
     const [images, setImages] = useState<string[]>([])
+    const router = useRouter();
+
     
     useEffect(() => {
         const numMen: number = 23;
         const men: string[] = [];
+        sessionStorage.clear()
     
         // Generate the array of image paths
         for (let i = 1; i <= numMen; i++) {
@@ -44,9 +48,13 @@ export default function Selection(){
     }, [])
 
     const handleImageClick = (side: string) => {
-        console.log("starting images", images)
         if(finalRound){
-            return
+            let winningImg: string = side === 'left' ? leftImage : rightImage;
+            sessionStorage.setItem("winningImg", winningImg)
+
+            router.push({
+                pathname: '/winner',
+              });        
         }
 
         if(images.length > 0) { 
