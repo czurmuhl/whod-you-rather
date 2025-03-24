@@ -12,49 +12,61 @@ function getRandomInt(min: number, max: number): number {
 
 
 export default function Selection(){
-    const [leftImage, setLeftImage] = useState("")
-    const [rightImage, setRightImage] = useState("")
-    const [finalRound, setFinalRound] = useState(false)
-
-    const numMen: number = 23
-    let men: string[] = []
-    for(let i = 1; i <= numMen; i++){
-        men.push(`/images/men/${i}.jpg`)
-    }
+    const [leftImage, setLeftImage] = useState<string>("")
+    const [rightImage, setRightImage] = useState<string>("")
+    const [finalRound, setFinalRound] = useState<boolean>(false)
+    const [images, setImages] = useState<string[]>([])
     
     useEffect(() => {
-        let randomLeft: string = men[getRandomInt(0, men.length-1)]
-        men = men.filter(man => man !== randomLeft)
-        setLeftImage(randomLeft)
+        const numMen: number = 23;
+        const men: string[] = [];
     
-        let randomRight: string = men[getRandomInt(0, men.length-1)]
-        men = men.filter(man => man !== randomRight)
-        setRightImage(randomRight)
+        // Generate the array of image paths
+        for (let i = 1; i <= numMen; i++) {
+          men.push(`/images/men/${i}.jpg`);
+        }
+    
+        // Pick random images for left and right
+        const randomLeftIndex: number = getRandomInt(0, men.length - 1);
+        const randomLeft: string = men[randomLeftIndex];
+        
+        // Remove the random left image from the array
+        let filtered: string[] = men.filter(man => man !== randomLeft);
+    
+        const randomRightIndex: number = getRandomInt(0, filtered.length - 1);
+        const randomRight: string = filtered[randomRightIndex];
+    
+        // Set the final images state and the selected left and right images
+        setImages(filtered.filter(man => man !== randomRight));  // Remove the random right image as well
+        setLeftImage(randomLeft);
+        setRightImage(randomRight);
 
     }, [])
 
     const handleImageClick = (side: string) => {
+        console.log("starting images", images)
         if(finalRound){
             return
         }
 
-        if(men.length > 0) { 
-            let randomMan: string = men[getRandomInt(0, men.length-1)]
-            men = men.filter(man => man !== randomMan)
+        if(images.length > 0) { 
+            const randomMan: string = images[getRandomInt(0, images.length-1)]
 
             if(side === 'left') {
-                setLeftImage(randomMan)
+                setRightImage(randomMan)
 
             } else {
-                setRightImage(randomMan)
+                setLeftImage(randomMan)
             }
-
+            
+            const filtered: string[] = images.filter(man => man !== randomMan)
+            setImages(filtered)
         } else{
             if(side === 'left'){
-                setLeftImage("/images/kyle.jpg")
+                setRightImage("/images/kyle.jpg")
 
             } else {
-                setRightImage("/images/kyle.jpg")
+                setLeftImage("/images/kyle.jpg")
             }
             setFinalRound(true);
         }
