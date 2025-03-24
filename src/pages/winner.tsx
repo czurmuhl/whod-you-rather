@@ -73,7 +73,7 @@ export default function Winner() {
                         {image ? (
                             <Image className="rounded-lg shadow-lg" src={image} alt="Winner" width={400} height={400} />
                         ) : (
-                            <Image className="rounded-lg shadow-lg" src="/images/men/19.jpg" alt="Winner" width={400} height={400} />
+                            <Image className="rounded-lg shadow-lg" src="/images/men/24.jpg" alt="Winner" width={400} height={400} />
                         )}
                     </div>
 
