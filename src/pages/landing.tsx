@@ -39,7 +39,8 @@ export default function Landing(){
                             width: "150px",
                             height: "50px",
                             fontSize: "20px",
-                            fontFamily: "Comic Sans MS",
+                            fontFamily: "Comic Neue",
+                            fontWeight: "bold",
                             '&:hover': {
                                 backgroundColor: darkerPink,
                                 borderColor: lightHotPink, // Change border color on hover (light hot pink)

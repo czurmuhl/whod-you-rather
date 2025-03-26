@@ -82,7 +82,8 @@ export default function Winner() {
                                     width: "200px",
                                     height: "50px",
                                     fontSize: "20px",
-                                    fontFamily: "Comic Sans MS",
+                                    fontFamily: "Comic Neue",
+                                    fontWeight: "bold",
                                     '&:hover': {
                                         backgroundColor: darkerPink,
                                         borderColor: lightHotPink,
