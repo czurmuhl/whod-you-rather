@@ -71,9 +71,9 @@ export default function Winner() {
                     </div>
                     <div id="winnerImage" className="absolute top-[25vh] h-[60vh] overflow-hidden absolute">
                         {image ? (
-                            <Image className="rounded-lg shadow-lg w-full object-cover object-top" src={image} alt="Winner" width={500} height={600} />
+                            <Image className="rounded-lg shadow-lg object-cover object-top" src={image} alt="Winner" width={500} height={600} />
                         ) : (
-                            <Image className="rounded-lg shadow-lg w-full object-cover object-top" src="/images/men/24.jpg" alt="Winner" width={500} height={600} />
+                            <Image className="rounded-lg shadow-lg object-cover object-top" src="/images/men/24.jpg" alt="Winner" width={500} height={600} />
                         )}
                     </div>
 

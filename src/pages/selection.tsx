@@ -84,10 +84,11 @@ export default function Selection(){
     return(
         <div className="h-screen grid grid-flow-col-dense grid-cols-12 grid-rows-1">
             <div id="leftImageContainer" 
-                 className="col-span-4 col-start-2 col-end-6 mt-[15%] h-[75vh] overflow-hidden relative">
+                 className="col-span-4 col-start-2 col-end-6 mt-[15%] h-[75%] overflow-hidden relative">
                 <Image alt="leftMan" 
                        className="w-full h-full object-cover object-top" 
-                       src={leftImage} width={500} 
+                       src={leftImage} 
+                       width={500} 
                        height={500} 
                        priority={true}
                        onClick={() => handleImageClick('left')}/>
@@ -103,7 +104,7 @@ export default function Selection(){
             </div>
 
             <div id="rightImageContainer" 
-                 className="col-span-4 col-start-8 col-end-12 mt-[15%] h-[75vh] overflow-hidden relative">
+                 className="col-span-4 col-start-8 col-end-12 mt-[15%] h-[75%] overflow-hidden relative">
                 <Image alt="rightMan" 
                        className="w-full h-full object-cover object-top" 
                        src={rightImage} 
