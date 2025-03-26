@@ -84,7 +84,7 @@ export default function Selection(){
     return(
         <div className="h-screen grid grid-flow-col-dense grid-cols-12 grid-rows-1">
             <div id="leftImageContainer" 
-                 className="col-span-4 col-start-2 col-end-6 mt-[15%] w-[500px] h-[600px] overflow-hidden relative">
+                 className="col-span-4 col-start-2 col-end-6 mt-[15%] h-[75vh] overflow-hidden relative">
                 <Image alt="leftMan" 
                        className="w-full h-full object-cover object-top" 
                        src={leftImage} width={500} 
@@ -93,8 +93,8 @@ export default function Selection(){
                        onClick={() => handleImageClick('left')}/>
             </div>
 
-            <div id="orContainer" className="col-span-1 col-start-6 col-end-8">
-                <p className="text-black mt-[150%] ml-[90px]" 
+            <div id="orContainer" className="col-span-1 col-start-6 col-end-8 text-center">
+                <p className="text-black pt-[50vh]" 
                    style={{
                         fontSize: "300%",
                         color: "black",
@@ -103,7 +103,7 @@ export default function Selection(){
             </div>
 
             <div id="rightImageContainer" 
-                 className="col-span-4 col-start-8 col-end-12 mt-[15%] w-[500px] h-[600px] overflow-hidden relative">
+                 className="col-span-4 col-start-8 col-end-12 mt-[15%] h-[75vh] overflow-hidden relative">
                 <Image alt="rightMan" 
                        className="w-full h-full object-cover object-top" 
                        src={rightImage} 

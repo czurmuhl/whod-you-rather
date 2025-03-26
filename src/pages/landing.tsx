@@ -23,14 +23,14 @@ export default function Landing(){
 
           <div className="relative">          
             <div className="h-screen flex items-center justify-center">
-                <Heart widthPercent="24%" 
-                    heightPercent="42%" 
+                <Heart width="360px" 
+                    height="360px" 
                     backgroundColor={heartColor} 
                     title={title} 
                     subtitle={subtitle}/>
             </div>
             <Link href="/selection">
-                <PlayButton className="absolute top-[80%] left-3/4" 
+                <PlayButton className="absolute top-8/10 left-3/4 overflow-hidden" 
                             text="PLAY"
                             sx={{
                             backgroundColor: hotPink, 

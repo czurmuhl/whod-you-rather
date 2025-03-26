@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 interface HeartProperties{
-    widthPercent: string
-    heightPercent: string
+    width: string
+    height: string
     backgroundColor: string
     title?: string
     subtitle?: string
@@ -14,8 +14,8 @@ const Heart: React.FC<HeartProperties> = (props: HeartProperties) => {
             <div 
                 className="relative mt-4 ml-4 -rotate-45" 
                 style={{
-                    width: props.widthPercent, 
-                    height: props.heightPercent, 
+                    width: props.width, 
+                    height: props.height, 
                     backgroundColor: props.backgroundColor
                 }}
             >
@@ -39,8 +39,8 @@ const Heart: React.FC<HeartProperties> = (props: HeartProperties) => {
                 ></div> 
             </div>
 
-            <div id="bachelorette" className="absolute inset-0 flex justify-center items-center mt-[5%] mb-[30%] ml-[35%]" style={{"height": "30%", width: "30%"}}>
-                <Image src="/images/melrose.png" alt="melrose" width={420} height={150} layout="responsive"></Image>
+            <div id="bachelorette" className="absolute flex justify-center items-center pb-[420px]">
+                <Image src="/images/melrose.png" alt="melrose" width={420} height={150}></Image>
             </div>
 
             <div className="absolute inset-0 flex justify-center items-center">
@@ -58,7 +58,7 @@ const Heart: React.FC<HeartProperties> = (props: HeartProperties) => {
 
             <div className="absolute inset-0 flex justify-center items-center -rotate-10">
                 <p id="titleSubtitle" 
-                   className="text-black font-bold mt-[25%]" 
+                   className="text-black font-bold pt-100" 
                    style={{
                         fontSize: "400%",
                         color: "purple",

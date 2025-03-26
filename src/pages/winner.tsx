@@ -30,7 +30,7 @@ export default function Winner() {
             </Head>
 
             {/* Raining Rings in Background */}
-            <div className="relative min-h-screen flex justify-center items-center overflow-hidden m-0">
+            <div className="relative w-full min-h-screen overflow-hidden">
                 {/* Render falling engagement rings */}
                 {Array.from({ length: numRings }).map((_, i) => (
                     <img
@@ -48,9 +48,9 @@ export default function Winner() {
                 ))}
 
                 {/* Winner Content */}
-                <div className="z-10 text-center w-full">
-                    <div className="w-screen flex flex-row mt-0 m-0">
-                        <div className="flex-shrink-0">
+                <div className="relative z-10 flex item-start ">
+                    <div className="absolute flex-shrink-0">
+
                             <iframe
                                 style={{ borderRadius: "12px", pointerEvents: 'auto' }}
                                 src="https://open.spotify.com/embed/track/77mnUPdjFBDZuBnSLgOEgb?utm_source=generator&theme=0&autoplay=true"
@@ -59,26 +59,26 @@ export default function Winner() {
                                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                                 loading="lazy"
                             />
-                        </div>
-                        <div className="pl-[14%] py-8">
-                            <p className="text-7xl text-black drop-shadow-lg" style={{ fontFamily: "Notable, sans-serif" }}>
-                                WINNER!
-                            </p>
-                        </div>
                     </div>
+                </div>
 
-
-                    {/* Winner Image */}
-                    <div id="winnerImage" className="flex justify-center items-center w-full h-[600px] overflow-hidden relative mt-4">
+                <div className="flex justify-center items-cente z-10r">
+                        {/* Winner Image */}
+                    <div className="absolute pt-[50px]">
+                        <p className="text-7xl text-black drop-shadow-lg" style={{ fontFamily: "Notable, sans-serif" }}>
+                            WINNER!
+                        </p>
+                    </div>
+                    <div id="winnerImage" className="absolute top-[25vh] h-[60vh] overflow-hidden absolute">
                         {image ? (
-                            <Image className="rounded-lg shadow-lg object-cover" src={image} alt="Winner" width={500} height={600} />
+                            <Image className="rounded-lg shadow-lg w-full object-cover object-top" src={image} alt="Winner" width={500} height={600} />
                         ) : (
-                            <Image className="rounded-lg shadow-lg object-cover" src="/images/men/24.jpg" alt="Winner" width={500} height={600} />
+                            <Image className="rounded-lg shadow-lg w-full object-cover object-top" src="/images/men/24.jpg" alt="Winner" width={500} height={600} />
                         )}
                     </div>
 
                     {/* Play Again Button */}
-                    <div id="playAgain" className="mt-10">
+                    <div id="playAgain" className="absolute top-8/9">
                         <Link href="/selection">
                             <PlayButton
                                 className="text-center"
@@ -101,6 +101,8 @@ export default function Winner() {
                     </div>
                 </div>
 
+            </div>
+
                 {/* Animation Styles */}
                 <style jsx>{`
                     @keyframes fall {
@@ -119,7 +121,6 @@ export default function Winner() {
                         animation-iteration-count: infinite;
                     }
                 `}</style>
-            </div>
         </>
     )
 }
