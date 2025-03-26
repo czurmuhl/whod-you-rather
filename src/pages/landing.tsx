@@ -2,7 +2,6 @@
 import Heart from "@/components/Heart"
 import PlayButton from "@/components/PlayButton"
 import Link from "next/link"
-import Head from "next/head"
 
 export default function Landing(){
 

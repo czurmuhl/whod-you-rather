@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Head from "next/head";
 
 interface HeartProperties{
     width: string
@@ -12,12 +11,6 @@ interface HeartProperties{
 const Heart: React.FC<HeartProperties> = (props: HeartProperties) => {
     return (
        <>
-            <Head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap&display=swap" rel="stylesheet" />
-            </Head>
-
             <div 
                 className="relative mt-4 ml-4 -rotate-45" 
                 style={{
@@ -47,7 +40,7 @@ const Heart: React.FC<HeartProperties> = (props: HeartProperties) => {
             </div>
 
             <div id="bachelorette" className="absolute flex justify-center items-center pb-[420px]">
-                <Image src="/images/melrose.png" alt="melrose" width={420} height={150}></Image>
+                <Image src="images/melrose.png" alt="melrose" width={420} height={150}></Image>
             </div>
 
             <div className="absolute inset-0 flex justify-center items-center">

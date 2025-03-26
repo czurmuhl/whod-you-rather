@@ -3,8 +3,6 @@ import Image from 'next/image'
 import PlayButton from '@/components/PlayButton';
 import Link from 'next/link'
 import { useState, useEffect } from 'react';
-import Head from 'next/head'
-
 
 export default function Winner() {
     const hotPink: string = '#FF69B4'
@@ -23,19 +21,13 @@ export default function Winner() {
 
     return (
         <>
-             <Head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet" />
-            </Head>
-
             {/* Raining Rings in Background */}
             <div className="relative w-full min-h-screen overflow-hidden">
                 {/* Render falling engagement rings */}
                 {Array.from({ length: numRings }).map((_, i) => (
                     <img
                         key={i}
-                        src="/images/engagement_ring.jpg"
+                        src="images/engagement_ring.jpg"
                         alt="Engagement Ring"
                         className="absolute opacity-90 animate-fall"
                         style={{
@@ -73,7 +65,7 @@ export default function Winner() {
                         {image ? (
                             <Image className="rounded-lg shadow-lg object-cover object-top" src={image} alt="Winner" width={500} height={600} />
                         ) : (
-                            <Image className="rounded-lg shadow-lg object-cover object-top" src="/images/men/24.jpg" alt="Winner" width={500} height={600} />
+                            <Image className="rounded-lg shadow-lg object-cover object-top" src="images/men/24.jpg" alt="Winner" width={500} height={600} />
                         )}
                     </div>
 

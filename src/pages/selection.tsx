@@ -27,7 +27,7 @@ export default function Selection(){
     
         // Generate the array of image paths
         for (let i = 1; i <= numMen; i++) {
-          men.push(`/images/men/${i}.jpg`);
+          men.push(`images/men/${i}.jpg`);
         }
     
         // Pick random images for left and right
@@ -71,10 +71,10 @@ export default function Selection(){
             setImages(filtered)
         } else{
             if(side === 'left'){
-                setRightImage("/images/kyle.jpg")
+                setRightImage("images/kyle.jpg")
 
             } else {
-                setLeftImage("/images/kyle.jpg")
+                setLeftImage("images/kyle.jpg")
             }
             setFinalRound(true);
         }
