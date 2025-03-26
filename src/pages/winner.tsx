@@ -1,4 +1,3 @@
-"use client";
 import Image from 'next/image'
 import PlayButton from '@/components/PlayButton';
 import Link from 'next/link'
