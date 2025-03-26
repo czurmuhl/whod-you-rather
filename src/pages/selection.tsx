@@ -54,7 +54,8 @@ export default function Selection(){
 
             router.push({
                 pathname: '/winner',
-              });        
+              });
+              return;        
         }
 
         if(images.length > 0) { 
